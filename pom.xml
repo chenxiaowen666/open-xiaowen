@@ -9,7 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>PersonInfo</module>
+        <module>user-service</module>
+        <module>comm-service</module>
+        <module>open-xiaowen-dependencis</module>
+
     </modules>
 
     <parent>
@@ -29,6 +32,11 @@
         <mysql.version>8.0.30</mysql.version>
         <org.projectlombok.version>1.18.22</org.projectlombok.version>
         <huTool.version>5.8.36</huTool.version>
+
+            <springdoc.version>2.5.0</springdoc.version>
+            <!-- 监控相关 -->
+            <skywalking.version>8.12.0</skywalking.version>
+
     </properties>
 
 
@@ -67,18 +75,23 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+            </dependency>
 
 
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <!--单元测试-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
         <!-- lombok 管理 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -96,7 +109,14 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>${huTool.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
 
     </dependencies>
 

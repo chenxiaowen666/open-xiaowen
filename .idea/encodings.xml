@@ -2,7 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/PersonInfo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/comm-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/open-xiaowen-dependencis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/open-xiaowen-dependencis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
   </component>
 </project>
